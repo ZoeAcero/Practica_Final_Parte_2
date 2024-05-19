@@ -86,4 +86,22 @@ public class Main extends JFrame{
     public void crearNuevoExperimento() {
         experimento = new Experimento(new ArrayList<>(), 0);
     }
+
+    public void guardarExperimento() {
+        JFileChooser fileChooser = new JFileChooser();
+        int returnValue = fileChooser.showSaveDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            GestorDeArchivos.guardarExperimento(experimento, selectedFile.getPath());
+        }
+    }
+
+    public void guardarComoNuevoArchivo() {
+        JFileChooser fileChooser = new JFileChooser();
+        int returnValue = fileChooser.showSaveDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            GestorDeArchivos.guardarExperimentoComoNuevoArchivo(experimento, selectedFile.getPath());
+        }
+    }
 }
