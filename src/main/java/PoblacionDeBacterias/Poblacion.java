@@ -10,4 +10,14 @@ public class Poblacion {
     private LocalDate fechaInicio;
     private List<Bacteria> bacterias;
 
+    public Poblacion(String nombre, LocalDate fechaInicio, List<Bacteria> bacterias) {
+        setNombre(nombre);
+        setFechaInicio(fechaInicio);
+        setBacterias(bacterias);
+    }
+
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
+
 }
