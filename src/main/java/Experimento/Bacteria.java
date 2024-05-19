@@ -43,4 +43,16 @@ public class Bacteria {
             this.comidaConsumida += 10;
         }
     }
+
+    public int reproducir() {
+        if (comidaConsumida >= UMBRAL_ALTO) {
+            return 3;
+        } else if (comidaConsumida >= UMBRAL_MEDIO) {
+            return 2;
+        } else if (comidaConsumida >= UMBRAL_BAJO) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
