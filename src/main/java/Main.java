@@ -132,4 +132,14 @@ public class Main extends JFrame{
         }
         JOptionPane.showMessageDialog(null, resultados.toString());
     }
+
+    public void visualizarSimulacion() {
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Main main = new Main();
+            main.setVisible(true);
+        });
+    }
 }
