@@ -98,4 +98,17 @@ public class Plato {
         }
         return coordenadas;
     }
+
+    public void distribuirComidaAleatoria(int cantidad) {
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad de comida a distribuir debe ser positiva");
+        }
+        for (int i = 0; i < celdas.length; i++) {
+            for (int j = 0; j < celdas[i].length; j++) {
+                if (random.nextBoolean()) {
+                    celdas[i][j] += cantidad;
+                }
+            }
+        }
+    }
 }
