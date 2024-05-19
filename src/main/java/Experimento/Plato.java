@@ -111,4 +111,10 @@ public class Plato {
             }
         }
     }
+
+    private void validarCoordenadas(int x, int y) {
+        if (x < 0 || x >= celdas.length || y < 0 || y >= celdas[0].length) {
+            throw new IllegalArgumentException("Las coordenadas están fuera del rango del plato");
+        }
+    }
 }
