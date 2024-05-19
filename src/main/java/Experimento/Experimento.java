@@ -17,4 +17,15 @@ public class Experimento {
     public List<Poblacion> getPoblaciones() {
         return this.poblaciones;
     }
+
+    public void setPoblaciones(List<Poblacion> poblaciones) {
+        if (poblaciones == null) {
+            throw new IllegalArgumentException("La lista de poblaciones no puede ser nula");
+        }
+        this.poblaciones = poblaciones;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
 }
