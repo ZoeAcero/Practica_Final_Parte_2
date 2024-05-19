@@ -60,4 +60,17 @@ public class Plato {
             }
         }
     }
+
+    public void distribuirComidaAlternado(int cantidad, int dia) {
+        if (cantidad < 0 || dia < 0) {
+            throw new IllegalArgumentException("La cantidad de comida y el día deben ser positivos");
+        }
+        if (dia % 2 == 0) {
+            for (int i = 0; i < celdas.length; i++) {
+                for (int j = 0; j < celdas[i].length; j++) {
+                    celdas[i][j] += cantidad;
+                }
+            }
+        }
+    }
 }
