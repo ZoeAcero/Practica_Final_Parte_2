@@ -32,4 +32,15 @@ public class Bacteria {
         x += random.nextInt(3) - 1; // Mover la bacteria a una celda contigua en el eje x
         y += random.nextInt(3) - 1; // Mover la bacteria a una celda contigua en el eje y
     }
+
+    public void comer(int comida) {
+        if (comida < 0) {
+            throw new IllegalArgumentException("La comida no puede ser negativa");
+        }
+        if (comida >= 100) {
+            this.comidaConsumida += 20;
+        } else if (comida > 10) {
+            this.comidaConsumida += 10;
+        }
+    }
 }
