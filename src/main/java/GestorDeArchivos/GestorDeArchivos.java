@@ -39,4 +39,14 @@ public class GestorDeArchivos {
         }
         return experimento;
     }
+
+    public static boolean archivoExiste(String rutaArchivo) {
+        File file = new File(rutaArchivo);
+        return file.exists();
+    }
+
+    public static boolean eliminarArchivo(String rutaArchivo) {
+        File file = new File(rutaArchivo);
+        return file.delete();
+    }
 }
