@@ -121,4 +121,15 @@ public class Main extends JFrame{
 
     public void verDetallesPoblacion() {
     }
+
+    public void realizarSimulacion() {
+        Simulacion simulacion = new Simulacion();
+        simulacion.realizarSimulacionDiaria();
+        StringBuilder resultados = new StringBuilder();
+        List<Bacteria> bacterias = simulacion.getBacterias();
+        for (Bacteria bacteria : bacterias) {
+            resultados.append("Bacteria en posición: ").append(bacteria.getX()).append(", ").append(bacteria.getY()).append("\n");
+        }
+        JOptionPane.showMessageDialog(null, resultados.toString());
+    }
 }
