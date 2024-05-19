@@ -57,4 +57,20 @@ public class Main extends JFrame{
         menuItem.addActionListener(e -> eliminarPoblacion());
         menuItem.setFont(new Font("Arial", Font.BOLD, 14));
         menu.add(menuItem);
+        menuItem = new JMenuItem("Ver detalles de población");
+        menuItem.addActionListener(e -> verDetallesPoblacion());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        menu = new JMenu("Simulación");
+        menuBar.add(menu);
+        menuItem = new JMenuItem("Realizar simulación");
+        menuItem.addActionListener(e -> realizarSimulacion());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        menuItem = new JMenuItem("Visualizar simulación");
+        menuItem.addActionListener(e -> visualizarSimulacion());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        this.setJMenuBar(menuBar);
+    }
 }
