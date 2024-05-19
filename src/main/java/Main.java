@@ -104,4 +104,21 @@ public class Main extends JFrame{
             GestorDeArchivos.guardarExperimentoComoNuevoArchivo(experimento, selectedFile.getPath());
         }
     }
+
+    public void añadirNuevaPoblacion() {
+        Poblacion nuevaPoblacion = new Poblacion("nombre", new Date(), new ArrayList<>());
+        experimento.agregarNuevaPoblacion(nuevaPoblacion);
+    }
+
+    public void listarPoblaciones() {
+        for (Poblacion poblacion : experimento.getPoblaciones()) {
+            System.out.println(poblacion.getNombre());
+        }
+    }
+
+    public void eliminarPoblacion() {
+    }
+
+    public void verDetallesPoblacion() {
+    }
 }
