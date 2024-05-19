@@ -42,4 +42,11 @@ public class Poblacion {
         return bacterias;
     }
 
+    public void setBacterias(List<Bacteria> bacterias) {
+        if (bacterias == null) {
+            throw new IllegalArgumentException("La lista de bacterias no puede ser nula");
+        }
+        this.bacterias = bacterias;
+    }
+
 }
