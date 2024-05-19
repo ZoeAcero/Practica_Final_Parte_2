@@ -55,4 +55,8 @@ public class Bacteria {
             return 0;
         }
     }
+
+    public int getComidaConsumida() {
+        return 0;
+    }
 }
