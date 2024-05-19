@@ -1,13 +1,13 @@
 package PoblacionDeBacterias;
 
 import Experimento.Bacteria;
-import java.time.LocalDate;
+
 import java.util.Date;
 import java.util.List;
 
 public class Poblacion {
     private String nombre;
-    private LocalDate fechaInicio;
+    private Date fechaInicio;
     private List<Bacteria> bacterias;
 
     public Poblacion(String nombre, Date fechaInicio, List<Bacteria> bacterias) {
@@ -16,11 +16,11 @@ public class Poblacion {
         setBacterias(bacterias);
     }
 
-    public LocalDate getFechaInicio() {
+    public Date getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(LocalDate fechaInicio) {
+    public void setFechaInicio(Date fechaInicio) {
         if (fechaInicio == null) {
             throw new IllegalArgumentException("La fecha de inicio no puede ser nula");
         }
