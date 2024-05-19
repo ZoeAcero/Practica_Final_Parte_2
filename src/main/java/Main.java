@@ -31,4 +31,16 @@ public class Main extends JFrame{
         menuItem.addActionListener(e -> abrirExperimento());
         menuItem.setFont(new Font("Arial", Font.BOLD, 14));
         menu.add(menuItem);
+        menuItem = new JMenuItem("Crear nuevo experimento");
+        menuItem.addActionListener(e -> crearNuevoExperimento());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        menuItem = new JMenuItem("Guardar experimento");
+        menuItem.addActionListener(e -> guardarExperimento());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        menuItem = new JMenuItem("Guardar como nuevo archivo");
+        menuItem.addActionListener(e -> guardarComoNuevoArchivo());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
 }
