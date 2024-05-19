@@ -65,4 +65,21 @@ public class Simulacion {
     public List<Bacteria> getBacterias() {
         return bacterias;
     }
+
+    public int calcularTotalBacterias() {
+        return bacterias.size();
+    }
+
+    public Bacteria encontrarBacteriaConMasComida() {
+        Bacteria maxBacteria = null;
+        int maxComida = 0;
+        for (Bacteria bacteria : bacterias) {
+            int comida = bacteria.getComidaConsumida();
+            if (comida > maxComida) {
+                maxComida = comida;
+                maxBacteria = bacteria;
+            }
+        }
+        return maxBacteria;
+    }
 }
