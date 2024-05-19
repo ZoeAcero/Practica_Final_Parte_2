@@ -73,4 +73,14 @@ public class Plato {
             }
         }
     }
+
+    public int calcularTotalComida() {
+        int total = 0;
+        for (int i = 0; i < celdas.length; i++) {
+            for (int j = 0; j < celdas[i].length; j++) {
+                total += celdas[i][j];
+            }
+        }
+        return total;
+    }
 }
