@@ -48,4 +48,16 @@ public class Plato {
             }
         }
     }
+
+    public void distribuirComidaIncrementoLineal(int cantidadInicial, int cantidadFinal, int dia, int duracion) {
+        if (cantidadInicial < 0 || cantidadFinal < 0 || dia < 0 || duracion <= 0) {
+            throw new IllegalArgumentException("Las cantidades de comida, el día y la duración deben ser positivos");
+        }
+        int cantidad = cantidadInicial + (cantidadFinal - cantidadInicial) * dia / duracion;
+        for (int i = 0; i < celdas.length; i++) {
+            for (int j = 0; j < celdas[i].length; j++) {
+                celdas[i][j] += cantidad;
+            }
+        }
+    }
 }
