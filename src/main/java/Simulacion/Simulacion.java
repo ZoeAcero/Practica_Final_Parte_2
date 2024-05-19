@@ -82,4 +82,10 @@ public class Simulacion {
         }
         return maxBacteria;
     }
+
+    public void realizarSimulacion(int dias) {
+        for (int i = 0; i < dias; i++) {
+            realizarSimulacionDiaria();
+        }
+    }
 }
