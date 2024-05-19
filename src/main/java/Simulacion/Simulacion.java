@@ -26,4 +26,20 @@ public class Simulacion {
             }
         }
     }
+
+    public void realizarSimulacionDiaria() {
+        List<Bacteria> bacteriasParaEliminar = new ArrayList<>();
+        List<Bacteria> bacteriasParaAgregar = new ArrayList<>();
+
+        for (Bacteria bacteria : bacterias) {
+            for (int i = 0; i < 10; i++) {
+                int comida = plato.getCelda(bacteria.getX(), bacteria.getY());
+
+                if (comida >= 100) {
+                    bacteria.comer(20);
+                    plato.reducirComida(bacteria.getX(), bacteria.getY(), 20);
+                } else if (comida > 10) {
+                    bacteria.comer(10);
+                    plato.reducirComida(bacteria.getX(), bacteria.getY(), 10);
+                }
 }
