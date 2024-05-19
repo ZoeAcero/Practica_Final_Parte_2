@@ -31,4 +31,15 @@ public class Poblacion {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre no puede ser nulo o vacío");
+        }
+        this.nombre = nombre;
+    }
+
+    public List<Bacteria> getBacterias() {
+        return bacterias;
+    }
+
 }
