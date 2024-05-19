@@ -8,4 +8,13 @@ import java.util.Objects;
 public class Experimento {
     private List<Poblacion> poblaciones;
     private int duracion;
+
+    public Experimento(List<Poblacion> poblaciones, int duracion) {
+        setPoblaciones(poblaciones);
+        setDuracion(duracion);
+    }
+
+    public List<Poblacion> getPoblaciones() {
+        return this.poblaciones;
+    }
 }
