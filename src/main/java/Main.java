@@ -12,5 +12,9 @@ import Simulacion.Simulacion;
 import Experimento.Bacteria;
 import java.util.List;
 
-public class Main {
+public class Main extends JFrame{
+    private JMenuBar menuBar;
+    private JMenu menu;
+    private JMenuItem menuItem;
+    private Experimento experimento;
 }
