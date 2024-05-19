@@ -21,4 +21,20 @@ public class Plato {
         validarCoordenadas(x, y);
         return celdas[x][y];
     }
+
+    public void reducirComida(int x, int y, int cantidad) {
+        validarCoordenadas(x, y);
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad de comida a reducir debe ser positiva");
+        }
+        celdas[x][y] -= cantidad;
+    }
+
+    private void inicializar() {
+        for (int i = 0; i < celdas.length; i++) {
+            for (int j = 0; j < celdas[i].length; j++) {
+                celdas[i][j] = COMIDA_INICIAL;
+            }
+        }
+    }
 }
