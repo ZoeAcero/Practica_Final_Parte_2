@@ -76,4 +76,14 @@ public class GestorDeArchivos {
             e.printStackTrace();
         }
     }
+
+    public static void moverArchivoExperimento(String rutaOrigen, String rutaDestino) {
+        Path origen = Paths.get(rutaOrigen);
+        Path destino = Paths.get(rutaDestino);
+        try {
+            Files.move(origen, destino);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
