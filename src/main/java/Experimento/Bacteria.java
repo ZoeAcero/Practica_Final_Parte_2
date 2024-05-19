@@ -19,4 +19,17 @@ public class Bacteria {
         this.comidaConsumida = 0;
         this.random = new Random();
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void mover() {
+        x += random.nextInt(3) - 1; // Mover la bacteria a una celda contigua en el eje x
+        y += random.nextInt(3) - 1; // Mover la bacteria a una celda contigua en el eje y
+    }
 }
