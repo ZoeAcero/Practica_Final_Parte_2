@@ -42,4 +42,19 @@ public class Simulacion {
                     bacteria.comer(10);
                     plato.reducirComida(bacteria.getX(), bacteria.getY(), 10);
                 }
+
+                int accion = random.nextInt(100);
+
+                if (accion < 33) {
+                    bacteriasParaEliminar.add(bacteria);
+                } else if (accion >= 66) {
+                    bacteria.mover();
+                }
+
+                int hijas = bacteria.reproducir();
+                for (int j = 0; j < hijas; j++) {
+                    bacteriasParaAgregar.add(new Bacteria(bacteria.getX(), bacteria.getY()));
+                }
+            }
+        }
 }
