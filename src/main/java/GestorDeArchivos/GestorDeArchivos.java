@@ -20,4 +20,23 @@ public class GestorDeArchivos {
             i.printStackTrace();
         }
     }
+
+    public static Experimento cargarExperimento(String rutaArchivo) {
+        Experimento experimento = null;
+        try {
+            FileInputStream fileIn = new FileInputStream(rutaArchivo);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            experimento = (Experimento) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+            return null;
+        } catch (ClassNotFoundException c) {
+            System.out.println("Experimento class not found");
+            c.printStackTrace();
+            return null;
+        }
+        return experimento;
+    }
 }
