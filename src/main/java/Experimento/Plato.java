@@ -83,4 +83,19 @@ public class Plato {
         }
         return total;
     }
+
+    public int[] encontrarCeldaConMasComida() {
+        int maxComida = 0;
+        int[] coordenadas = new int[2];
+        for (int i = 0; i < celdas.length; i++) {
+            for (int j = 0; j < celdas[i].length; j++) {
+                if (celdas[i][j] > maxComida) {
+                    maxComida = celdas[i][j];
+                    coordenadas[0] = i;
+                    coordenadas[1] = j;
+                }
+            }
+        }
+        return coordenadas;
+    }
 }
