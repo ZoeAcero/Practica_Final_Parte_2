@@ -17,4 +17,13 @@ public class Simulacion {
         this.random = new Random();
         inicializarBacterias();
     }
+
+    private void inicializarBacterias() {
+        int centro = 20 / 2;
+        for (int i = centro - 2; i <= centro + 2; i++) {
+            for (int j = centro - 2; j <= centro + 2; j++) {
+                bacterias.add(new Bacteria(i, j));
+            }
+        }
+    }
 }
