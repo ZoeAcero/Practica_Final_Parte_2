@@ -49,4 +49,8 @@ public class Experimento {
     public void ordenarPoblacionesPorNombre() {
         poblaciones.sort(Comparator.comparing(Poblacion::getNombre));
     }
+
+    public void ordenarPoblacionesPorNumeroBacterias() {
+        poblaciones.sort(Comparator.comparing(p -> p.getBacterias().size()));
+    }
 }
