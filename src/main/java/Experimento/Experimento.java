@@ -41,4 +41,12 @@ public class Experimento {
         Objects.requireNonNull(nuevaPoblacion, "La nueva población no puede ser nula");
         this.poblaciones.add(nuevaPoblacion);
     }
+
+    public void ordenarPoblacionesPorFecha() {
+        poblaciones.sort(Comparator.comparing(Poblacion::getFechaInicio));
+    }
+
+    public void ordenarPoblacionesPorNombre() {
+        poblaciones.sort(Comparator.comparing(Poblacion::getNombre));
+    }
 }
