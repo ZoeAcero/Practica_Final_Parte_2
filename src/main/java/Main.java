@@ -73,4 +73,17 @@ public class Main extends JFrame{
         menu.add(menuItem);
         this.setJMenuBar(menuBar);
     }
+
+    public void abrirExperimento() {
+        JFileChooser fileChooser = new JFileChooser();
+        int returnValue = fileChooser.showOpenDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            experimento = GestorDeArchivos.cargarExperimento(selectedFile.getPath());
+        }
+    }
+
+    public void crearNuevoExperimento() {
+        experimento = new Experimento(new ArrayList<>(), 0);
+    }
 }
