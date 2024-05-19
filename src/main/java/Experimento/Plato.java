@@ -37,4 +37,15 @@ public class Plato {
             }
         }
     }
+
+    public void distribuirComidaConstante(int cantidad) {
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad de comida a distribuir debe ser positiva");
+        }
+        for (int i = 0; i < celdas.length; i++) {
+            for (int j = 0; j < celdas[i].length; j++) {
+                celdas[i][j] += cantidad;
+            }
+        }
+    }
 }
