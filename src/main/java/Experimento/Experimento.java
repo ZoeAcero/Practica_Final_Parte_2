@@ -28,4 +28,17 @@ public class Experimento {
     public int getDuracion() {
         return duracion;
     }
+
+    public void setDuracion(int duracion) {
+        if (duracion < 0) {
+            throw new IllegalArgumentException("La duración no puede ser negativa");
+        }
+        this.duracion = duracion;
+    }
+
+    // Método adicional para agregar una nueva población
+    public void agregarNuevaPoblacion(Poblacion nuevaPoblacion) {
+        Objects.requireNonNull(nuevaPoblacion, "La nueva población no puede ser nula");
+        this.poblaciones.add(nuevaPoblacion);
+    }
 }
