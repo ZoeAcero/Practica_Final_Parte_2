@@ -20,4 +20,15 @@ public class Poblacion {
         return fechaInicio;
     }
 
+    public void setFechaInicio(LocalDate fechaInicio) {
+        if (fechaInicio == null) {
+            throw new IllegalArgumentException("La fecha de inicio no puede ser nula");
+        }
+        this.fechaInicio = fechaInicio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
 }
