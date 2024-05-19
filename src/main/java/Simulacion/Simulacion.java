@@ -57,4 +57,12 @@ public class Simulacion {
                 }
             }
         }
+
+        bacterias.removeAll(bacteriasParaEliminar);
+        bacterias.addAll(bacteriasParaAgregar);
+    }
+
+    public List<Bacteria> getBacterias() {
+        return bacterias;
+    }
 }
