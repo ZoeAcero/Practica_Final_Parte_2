@@ -12,4 +12,11 @@ public class Bacteria {
     private int y;
     private int comidaConsumida;
     private Random random;
+
+    public Bacteria(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.comidaConsumida = 0;
+        this.random = new Random();
+    }
 }
