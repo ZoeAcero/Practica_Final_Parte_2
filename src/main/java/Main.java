@@ -17,4 +17,18 @@ public class Main extends JFrame{
     private JMenu menu;
     private JMenuItem menuItem;
     private Experimento experimento;
+
+    public Main() {
+        setTitle("Simulación de Bacterias");
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(144, 238, 144));
+        menuBar = new JMenuBar();
+        menu = new JMenu("Archivo");
+        menuBar.add(menu);
+        menuItem = new JMenuItem("Abrir experimento");
+        menuItem.addActionListener(e -> abrirExperimento());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
 }
