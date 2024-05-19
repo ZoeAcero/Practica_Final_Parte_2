@@ -43,4 +43,18 @@ public class Main extends JFrame{
         menuItem.addActionListener(e -> guardarComoNuevoArchivo());
         menuItem.setFont(new Font("Arial", Font.BOLD, 14));
         menu.add(menuItem);
+        menu = new JMenu("Población");
+        menuBar.add(menu);
+        menuItem = new JMenuItem("Añadir nueva población");
+        menuItem.addActionListener(e -> añadirNuevaPoblacion());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        menuItem = new JMenuItem("Listar poblaciones");
+        menuItem.addActionListener(e -> listarPoblaciones());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
+        menuItem = new JMenuItem("Eliminar población");
+        menuItem.addActionListener(e -> eliminarPoblacion());
+        menuItem.setFont(new Font("Arial", Font.BOLD, 14));
+        menu.add(menuItem);
 }
